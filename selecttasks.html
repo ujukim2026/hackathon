@@ -11,20 +11,16 @@
 <head>
     <title>Tasks and Time Estimates</title>
     <script>
-        // Define arrays to store tasks and time estimates
         var tasks = [];
         var timeEstimates = [];
 
         function addData() {
-            // Get input values
             var task = document.getElementById("taskInput").value;
             var timeEstimate = document.getElementById("timeInput").value;
 
-            // Add values to respective arrays
             tasks.push(task);
             timeEstimates.push(timeEstimate);
 
-            // Display arrays
             document.getElementById("tasksDisplay").innerHTML = "Tasks: " + tasks.join(", ");
             document.getElementById("timeEstimatesDisplay").innerHTML = "Time Estimates: " + timeEstimates.join(", ");
         }
@@ -49,7 +45,7 @@
                 <button onclick="addData()">Add Data</button>
                 <br>
                 <div id="tasksDisplay"></div>
-                <div id="timeEstimatesDisplay"></div>
+                
             <br>
             <br>
             <a href="homepage.html"><button>Back</button></a>
