@@ -1,0 +1,64 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildHacks 2024</title>
+</head>
+<head>
+    <title>Tasks and Time Estimates</title>
+    <script>
+        // Define arrays to store tasks and time estimates
+        var tasks = [];
+        var timeEstimates = [];
+
+        function addData() {
+            // Get input values
+            var task = document.getElementById("taskInput").value;
+            var timeEstimate = document.getElementById("timeInput").value;
+
+            // Add values to respective arrays
+            tasks.push(task);
+            timeEstimates.push(timeEstimate);
+
+            // Display arrays
+            document.getElementById("tasksDisplay").innerHTML = "Tasks: " + tasks.join(", ");
+            document.getElementById("timeEstimatesDisplay").innerHTML = "Time Estimates: " + timeEstimates.join(", ");
+        }
+        var jsonData = JSON.stringify(myArray);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>WildHacks 2024</h1>
+        <p>Uju Kim and Elizabeth Park</p>
+    </header>
+   
+    <section id="tasks">
+        <h2 class="section-heading">Select Tasks</h2>
+        <div class="section-content">
+
+            <p>Add any other tasks and their estimated time to complete (in minutes) individualy with the textbox below:</p>
+                    <label for="taskInput">Task:</label>
+                    <input type="text" id="taskInput" name="taskInput" placeholder="Get coffee with friends">
+                    <label for="timeInput">Time Estimate:</label>
+                    <input type="number" id="timeInput" name="timeInput" placeholder="15">
+                    <br>
+                    <button onclick="addData()">Add Data</button>
+                    <br>
+                    <div id="tasksDisplay"></div>
+                    <div id="timeEstimatesDisplay"></div>
+            <br>
+            <br>
+
+            <a href="/chatbot"><button>Next</button></a>
+            
+            <a href="/homepage"><button>Back</button></a>
+        </div>
+    </section>

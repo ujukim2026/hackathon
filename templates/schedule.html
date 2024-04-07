@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildHacks 2024</title>
+</head>
+<body>
+    <header>
+        <h1>WildHacks 2024</h1>
+        <p>Uju Kim and Elizabeth Park</p>
+    </header>
+   
+    <section id="chatbot">
+        <h2 class="section-heading">Today's Schedule!</h2>
+        <div class="section-content">
+            <p>Here is a personalized schedule for today! Good luck on your tasks!</p>
+            <a href="/chatbot"><button>Back</button></a>
+            <a href="/selecttasks"><button>Go homepage</button></a>
+        </div>
+    </section>
